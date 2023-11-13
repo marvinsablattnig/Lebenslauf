@@ -1,0 +1,43 @@
+$primary-color: #31708e;
+$secondary-color: #b1a296;
+$background-color: #f7f9fb;
+$burger-color: $primary-color;
+$text-color: #001a23;
+$font: "Josefin Sans", sans-serif;
+$secondfont: "Signika Negative", sans-serif;
+$burger-size: 50px;
+
+//rgb(0, 65, 79)
+@function burger-size($component: string) {
+  @if ($component == "w") {
+    @return $burger-size;
+  } @else if($component == "h") {
+    @return $burger-size;
+  }
+}
+@mixin center($align) {
+  display: flex;
+  justify-content: center;
+  align-items: $align;
+  flex-wrap: wrap;
+}
+@mixin trans {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@function trans($type) {
+  @return $type 1s ease-in-out;
+}
+
+@mixin disabled {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  z-index: -3;
+}
+@mixin enabled {
+  opacity: 1 !important;
+  pointer-events: all;
+}
