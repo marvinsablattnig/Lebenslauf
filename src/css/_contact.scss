@@ -1,0 +1,19 @@
+#contact {
+  .flex-container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    // border: 2px solid;
+    margin-top: 80px;
+    padding: 0 0 0 15vw;
+  }
+  h2 {
+    margin-bottom: 40px;
+  }
+  table tr > td {
+    padding-right: 30px;
+  }
+  .content {
+    color: $primary-color;
+  }
+}
