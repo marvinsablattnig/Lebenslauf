@@ -111,11 +111,16 @@
 }
 .screen-nav {
   position: fixed;
-  width: 100vw;
+  width: 90vw;
+  margin: 0 5vw;
   background-color: $primary-color !important;
   padding-left: 5vw;
+
+  border-radius: 0 0 50px 50px;
+
   .navbar-collapse {
     margin: 0px 18px;
+    justify-content: space-around;
   }
   .nav-item {
     margin-right: 3vw;

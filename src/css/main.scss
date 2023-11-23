@@ -5,6 +5,16 @@
 @import "./resume";
 @import "./contact";
 
+.bg-img {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  min-height: 100vh;
+  top: -14vh;
+
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
 html {
   scroll-behavior: smooth;
 }
@@ -27,13 +37,13 @@ a:hover {
 }
 
 .main {
-  width: 100vw;
-  min-height: 50vh;
-  height: 100%;
-  // position: absolute;
-  padding: 0 !important;
-  padding-top: 10vh !important;
-  padding-bottom: 15vh !important;
+  margin: 10vh 10vw 0vh 10vw;
+  padding: 6vh 0 !important;
+
+  border-radius: 10px;
+
+  background-color: rgba(255, 255, 255, 0.59);
+  backdrop-filter: blur(3px);
 }
 .header {
   text-align: center;
@@ -51,4 +61,12 @@ footer {
   width: 100vw;
   text-align: center;
   padding: 3%;
+}
+@keyframes parallax {
+  to {
+    transform: translateY(-200px);
+  }
+}
+.invisible {
+  display: none;
 }

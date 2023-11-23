@@ -110,12 +110,15 @@
 }
 .screen-nav {
   position: fixed;
-  width: 100vw;
+  width: 90vw;
+  margin: 0 5vw;
   background-color: #31708e !important;
   padding-left: 5vw;
+  border-radius: 0 0 50px 50px;
 }
 .screen-nav .navbar-collapse {
   margin: 0px 18px;
+  justify-content: space-around;
 }
 .screen-nav .nav-item {
   margin-right: 3vw;
@@ -199,20 +202,25 @@
 }
 
 #home {
-  padding: max(20vh, 120px) 20vw 15vh 20vw !important;
+  margin: 16vh 0px 0px 20vw !important;
+  width: 50vw;
+  background-color: rgba(255, 255, 255, 0) !important;
 }
 #home .name-box {
   display: flex;
   flex-direction: column;
+  width: 100vw;
+  margin: 0px !important;
+}
+#home .name-box .text {
+  font-size: calc(18px + 1.4vw);
 }
 #home .name-box .titlename {
-  margin-top: 3vh;
-  margin-bottom: 3vh;
   position: relative;
 }
 #home .name-box .titlename h1 {
   font-family: "Signika Negative", sans-serif;
-  font-size: max(10vh, 62px);
+  font-size: max(10vh, 40px + 6vw);
 }
 #home img {
   position: absolute;
@@ -252,7 +260,7 @@
   text-align: right;
   grid-column: 1/2;
   grid-row: 1/2;
-  color: #b1a296;
+  color: #31708e;
 }
 #work .grid-container .col,
 #school .grid-container .col {
@@ -282,6 +290,16 @@
   color: #31708e;
 }
 
+.bg-img {
+  position: fixed;
+  z-index: -1;
+  width: 100vw;
+  min-height: 100vh;
+  top: -14vh;
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+
 html {
   scroll-behavior: smooth;
 }
@@ -300,12 +318,12 @@ a:hover {
 }
 
 .main {
-  width: 100vw;
-  min-height: 50vh;
-  height: 100%;
-  padding: 0 !important;
-  padding-top: 10vh !important;
-  padding-bottom: 15vh !important;
+  margin: 10vh 10vw 0vh 10vw;
+  padding: 6vh 0 !important;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.59);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .header {
@@ -323,4 +341,13 @@ footer {
   width: 100vw;
   text-align: center;
   padding: 3%;
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(-200px);
+  }
+}
+.invisible {
+  display: none;
 }/*# sourceMappingURL=main.css.map */

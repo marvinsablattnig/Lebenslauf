@@ -4,6 +4,7 @@ const log = console.log;
 // let path = "/";
 function Header() {
   const [menuActive, changeMenuState] = useState(false);
+
   const changeMenu = () => {
     const overlay = document.querySelector<HTMLElement>(".grey-overlay");
     const burger = document.querySelector<HTMLElement>(".burger");
@@ -45,15 +46,14 @@ function Header() {
 
       changeMenuState(false);
     }
-    console.log(burger + " " + overlay);
   };
-
   return (
     <>
       <header>
         <button className="burger" onClick={changeMenu}>
           <div className="burgercontent"></div>
         </button>
+
         <nav className="navbar navbar-expand-lg navbar-dark bg-dark screen-nav">
           <div className="collapse navbar-collapse" id="navbarColor01">
             <ul className="navbar-nav mr-auto">

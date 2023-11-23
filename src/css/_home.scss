@@ -2,19 +2,27 @@
 
 #home {
   // margin: 16vh 16vw;
-  padding: max(20vh, 120px) 20vw 15vh 20vw !important;
+  margin: 16vh 0px 0px 20vw !important;
+  // padding: max(20vh, 120px) 20vw 15vh 20vw !important;
+  width: 50vw;
+  background-color: rgba(255, 255, 255, 0) !important;
 
   .name-box {
     display: flex;
     flex-direction: column;
 
+    width: 100vw;
+    margin: 0px !important;
+    .text {
+      font-size: calc(18px + 1.4vw);
+    }
     .titlename {
-      margin-top: 3vh;
-      margin-bottom: 3vh;
       position: relative;
       h1 {
         font-family: $secondfont;
-        font-size: max(10vh, 62px);
+
+        font-size: max(10vh, calc(40px + 6vw));
+        // font-size: 100%;
       }
     }
   }
