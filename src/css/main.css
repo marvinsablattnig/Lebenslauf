@@ -4,12 +4,12 @@
   right: 0px;
   left: 0px;
   bottom: 0px;
-  margin: 10vh 10vw;
+  margin: 10vh 30vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1;
+  z-index: 2;
   pointer-events: none !important;
 }
 .navigation .menu-element {
@@ -19,9 +19,9 @@
   margin-right: auto;
   padding: 10px;
   height: 10vh;
-  min-width: 200px !important;
+  min-width: 180px !important;
   border-radius: 60px;
-  background-color: #31708e !important;
+  background-color: rgb(33, 125, 171) !important;
   z-index: 1;
   opacity: 0;
   transition: width 1s ease-in-out;
@@ -65,9 +65,8 @@
     opacity: 1 !important;
     pointer-events: all;
   }
-  .grey-overlay {
-    opacity: 1;
-    pointer-events: all !important;
+  .language {
+    text-align: center;
   }
 }
 @media only screen and (min-width: 992px) {
@@ -111,17 +110,19 @@
 .screen-nav {
   position: fixed;
   width: 90vw;
-  margin: 0 5vw;
-  background-color: #31708e !important;
+  margin: -2px 5vw;
+  background-color: rgb(33, 125, 171) !important;
   padding-left: 5vw;
   border-radius: 0 0 50px 50px;
+  border: 1px solid white;
 }
 .screen-nav .navbar-collapse {
-  margin: 0px 18px;
+  margin: -12px 18px;
   justify-content: space-around;
 }
 .screen-nav .nav-item {
   margin-right: 3vw;
+  margin-bottom: 10px;
 }
 .screen-nav .nav-item .nav-link:hover {
   color: rgb(208, 208, 208);
@@ -132,14 +133,14 @@
 }
 
 .grey-overlay {
-  opacity: 0;
+  opacity: 1;
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0px;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: -3;
-  pointer-events: none;
+  display: none;
+  z-index: 1;
   transition: opacity 0.5s ease-in-out;
   color: green;
 }
@@ -150,34 +151,36 @@
 
 .burger {
   position: fixed;
-  padding: 0px;
+  padding: 10px;
   height: 50px;
   width: 50px;
   z-index: 3;
-  right: 40px;
-  top: 40px;
+  right: 30px;
+  top: 30px;
   border: 0px solid;
   background-color: transparent;
   pointer-events: all;
+  background-color: rgba(255, 255, 255, 0.693);
+  border-radius: 10px;
 }
 .burger:hover .burgercontent {
-  background: rgb(208, 208, 208);
+  background: rgb(139, 139, 139);
 }
 .burger:hover .burgercontent::before {
-  background: rgb(208, 208, 208);
+  background: rgb(139, 139, 139);
 }
 .burger:hover .burgercontent::after {
-  background: rgb(208, 208, 208);
+  background: rgb(139, 139, 139);
 }
 .burgercontent {
   content: "";
   position: absolute;
   width: 37.5px;
   height: 5px;
-  top: 5px;
-  right: 5px;
+  top: 8.34px;
+  right: 6px;
   z-index: 2;
-  background: #31708e;
+  background: rgb(33, 125, 171);
   border-radius: 20px;
 }
 .burgercontent::before {
@@ -187,7 +190,7 @@
   height: 5px;
   top: 14.0625px;
   right: 0px;
-  background: #31708e;
+  background: rgb(33, 125, 171);
   border-radius: 20px;
 }
 .burgercontent::after {
@@ -197,19 +200,29 @@
   height: 5px;
   top: 28.125px;
   right: 0px;
-  background: #31708e;
+  background: rgb(33, 125, 171);
   border-radius: 20px;
+}
+
+.active {
+  background-color: rgb(59, 188, 248) !important;
+}
+
+.btn {
+  border: none !important;
+  margin: 0 4px;
 }
 
 #home {
   margin: 16vh 0px 0px 20vw !important;
   width: 50vw;
   background-color: rgba(255, 255, 255, 0) !important;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
 }
 #home .name-box {
   display: flex;
   flex-direction: column;
-  width: 100vw;
   margin: 0px !important;
 }
 #home .name-box .text {
@@ -260,7 +273,7 @@
   text-align: right;
   grid-column: 1/2;
   grid-row: 1/2;
-  color: #31708e;
+  color: rgb(59, 188, 248);
 }
 #work .grid-container .col,
 #school .grid-container .col {
@@ -286,18 +299,9 @@
 #contact table tr > td {
   padding-right: 30px;
 }
-#contact .content {
-  color: #31708e;
-}
 
-.bg-img {
-  position: fixed;
-  z-index: -1;
-  width: 100vw;
-  min-height: 100vh;
-  top: -14vh;
-  animation: parallax linear;
-  animation-timeline: scroll();
+#root {
+  height: 10px;
 }
 
 html {
@@ -310,7 +314,6 @@ body {
   font-size: x-large;
   color: #001a23;
   overflow-x: hidden;
-  background-color: #f7f9fb;
 }
 
 a:hover {
@@ -318,23 +321,45 @@ a:hover {
 }
 
 .main {
-  margin: 10vh 10vw 0vh 10vw;
+  margin: 8vh 0 8vh 0;
   padding: 6vh 0 !important;
-  border-radius: 10px;
-  background-color: rgba(255, 255, 255, 0.59);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+}
+.main.light {
+  background-color: white;
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+.main.light * {
+  color: black;
+}
+.main.dark {
+  background-color: rgb(33, 125, 171);
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+.main.dark * {
+  color: white;
 }
 
+footer {
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+
+@keyframes parallax {
+  to {
+    transform: translateY(-500px);
+  }
+}
 .header {
   text-align: center;
   font-size: 34px;
   font-weight: bold;
-  border-bottom: 2px solid #31708e;
+  border-bottom: 2px solid rgb(33, 125, 171);
 }
 
 .primary-colored {
-  color: #31708e;
+  color: rgb(33, 125, 171) !important;
 }
 
 footer {
@@ -343,11 +368,21 @@ footer {
   padding: 3%;
 }
 
-@keyframes parallax {
-  to {
-    transform: translateY(-200px);
-  }
-}
 .invisible {
   display: none;
+}
+
+.english div {
+  display: inline;
+}
+
+ul {
+  margin-top: 20px;
+}
+
+.navanchor {
+  display: block;
+  position: relative;
+  top: -1px; /* adjusted to suit my purposes */
+  visibility: hidden;
 }/*# sourceMappingURL=main.css.map */

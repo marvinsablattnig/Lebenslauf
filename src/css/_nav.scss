@@ -6,13 +6,12 @@
   right: 0px;
   left: 0px;
   bottom: 0px;
-  margin: 10vh 10vw;
+  margin: 10vh 30vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  z-index: 1;
-  // width: 100vw;
+  z-index: 2;
   pointer-events: none !important;
 
   .menu-element {
@@ -22,7 +21,7 @@
     margin-right: auto;
     padding: 10px;
     height: 10vh;
-    min-width: 200px !important;
+    min-width: 180px !important;
     border-radius: 60px;
     background-color: $primary-color !important;
     z-index: 1;
@@ -72,9 +71,8 @@
   .mobile {
     @include enabled;
   }
-  .grey-overlay {
-    opacity: 1;
-    pointer-events: all !important;
+  .language {
+    text-align: center;
   }
 }
 //big screen
@@ -111,19 +109,21 @@
 }
 .screen-nav {
   position: fixed;
+
   width: 90vw;
-  margin: 0 5vw;
+  margin: -2px 5vw;
   background-color: $primary-color !important;
   padding-left: 5vw;
-
   border-radius: 0 0 50px 50px;
+  border: 1px solid white;
 
   .navbar-collapse {
-    margin: 0px 18px;
+    margin: -12px 18px;
     justify-content: space-around;
   }
   .nav-item {
     margin-right: 3vw;
+    margin-bottom: 10px;
     .nav-link {
       &:hover {
         color: rgb(208, 208, 208);
@@ -135,14 +135,16 @@
   color: $background-color;
 }
 .grey-overlay {
-  opacity: 0;
+  opacity: 1;
   width: 100vw;
   height: 100vh;
   position: fixed;
   top: 0px;
   background-color: rgba(0, 0, 0, 0.6);
-  z-index: -3;
-  pointer-events: none;
+  // z-index: -3;
+  // pointer-events: none;
+  display: none;
+  z-index: 1;
 
   -webkit-transition: opacity 0.5s ease-in-out;
   -moz-transition: opacity 0.5s ease-in-out;
@@ -158,23 +160,25 @@
 
 .burger {
   position: fixed;
-  padding: 0px;
+  padding: 10px;
   height: burger-size("h");
   width: burger-size("w");
   z-index: 3;
-  right: 40px;
-  top: 40px;
+  right: 30px;
+  top: 30px;
   border: 0px solid;
   background-color: transparent;
   pointer-events: all;
+  background-color: rgba(255, 255, 255, 0.693);
+  border-radius: 10px;
   &:hover {
     .burgercontent {
-      background: rgb(208, 208, 208);
+      background: rgb(139, 139, 139);
       &::before {
-        background: rgb(208, 208, 208);
+        background: rgb(139, 139, 139);
       }
       &::after {
-        background: rgb(208, 208, 208);
+        background: rgb(139, 139, 139);
       }
     }
   }
@@ -183,8 +187,8 @@
     position: absolute;
     width: burger-size("w") * 0.75;
     height: burger-size("h") * 0.1;
-    top: burger-size("h") * 0.1;
-    right: burger-size("h") * 0.1;
+    top: burger-size("h") * 0.1 + 3.34px;
+    right: burger-size("h") * 0.1 + 1px;
     z-index: 2;
     background: $primary-color;
     border-radius: 20px;
@@ -210,4 +214,11 @@
       border-radius: 20px;
     }
   }
+}
+.active {
+  background-color: $secondary-color !important;
+}
+.btn {
+  border: none !important;
+  margin: 0 4px;
 }

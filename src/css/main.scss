@@ -4,16 +4,8 @@
 @import "./about";
 @import "./resume";
 @import "./contact";
-
-.bg-img {
-  position: fixed;
-  z-index: -1;
-  width: 100vw;
-  min-height: 100vh;
-  top: -14vh;
-
-  animation: parallax linear;
-  animation-timeline: scroll();
+#root {
+  height: 10px;
 }
 html {
   scroll-behavior: smooth;
@@ -24,12 +16,6 @@ body {
   font-size: x-large;
   color: $text-color;
   overflow-x: hidden;
-  background-color: $background-color;
-  // background: linear-gradient(
-  //   to right,
-  //   rgba($background-color, 1),
-  //   rgba(black, 1)
-  // );
 }
 
 a:hover {
@@ -37,13 +23,36 @@ a:hover {
 }
 
 .main {
-  margin: 10vh 10vw 0vh 10vw;
+  // margin: 10vh 10vw 0vh 10vw;
+  margin: 8vh 0 8vh 0;
   padding: 6vh 0 !important;
 
-  border-radius: 10px;
+  &.light {
+    background-color: white;
+    & * {
+      color: black;
+    }
+    animation: parallax linear;
+    animation-timeline: scroll();
+  }
 
-  background-color: rgba(255, 255, 255, 0.59);
-  backdrop-filter: blur(3px);
+  &.dark {
+    background-color: $primary-color;
+    & * {
+      color: white;
+    }
+    animation: parallax linear;
+    animation-timeline: scroll();
+  }
+}
+footer {
+  animation: parallax linear;
+  animation-timeline: scroll();
+}
+@keyframes parallax {
+  to {
+    transform: translateY(-500px);
+  }
 }
 .header {
   text-align: center;
@@ -53,7 +62,7 @@ a:hover {
   border-bottom: 2px solid $primary-color;
 }
 .primary-colored {
-  color: $primary-color;
+  color: $primary-color !important;
 }
 
 footer {
@@ -62,11 +71,19 @@ footer {
   text-align: center;
   padding: 3%;
 }
-@keyframes parallax {
-  to {
-    transform: translateY(-200px);
-  }
-}
 .invisible {
   display: none;
+}
+
+.english div {
+  display: inline;
+}
+ul {
+  margin-top: 20px;
+}
+.navanchor {
+  display: block;
+  position: relative;
+  top: -1px; /* adjusted to suit my purposes */
+  visibility: hidden;
 }

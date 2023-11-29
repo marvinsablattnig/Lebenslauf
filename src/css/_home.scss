@@ -7,11 +7,13 @@
   width: 50vw;
   background-color: rgba(255, 255, 255, 0) !important;
 
+  backdrop-filter: none;
+
   .name-box {
     display: flex;
     flex-direction: column;
 
-    width: 100vw;
+    // width: 100vw;
     margin: 0px !important;
     .text {
       font-size: calc(18px + 1.4vw);

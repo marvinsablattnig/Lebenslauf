@@ -1,10 +1,11 @@
 function Home() {
   return (
     <>
-      <main className="main" id="home">
+      <div id="homenav" className="navanchor"></div>
+      <main className="main a" id="home">
         <div className="name-box">
           <div className="text first">
-            <div className="german invisble">Ich bin</div>
+            <div className="german invisible">Ich bin</div>
             <div className="english">I am</div>
           </div>
           <div className="titlename">
