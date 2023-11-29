@@ -6,9 +6,6 @@
   "homepage": "http://marvinsablattnig.github.io/Lebenslauf",
   "type": "module",
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
     
     "dev": "vite",
     "build": "react-scripts build",
