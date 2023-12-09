@@ -32,8 +32,8 @@ a:hover {
     & * {
       color: black;
     }
-    animation: parallax linear;
-    animation-timeline: scroll();
+    // animation: parallax linear;
+    // animation-timeline: scroll();
   }
 
   &.dark {
@@ -41,19 +41,19 @@ a:hover {
     & * {
       color: white;
     }
-    animation: parallax linear;
-    animation-timeline: scroll();
+    // animation: parallax linear;
+    // animation-timeline: scroll();
   }
 }
-footer {
-  animation: parallax linear;
-  animation-timeline: scroll();
-}
-@keyframes parallax {
-  to {
-    transform: translateY(-500px);
-  }
-}
+// footer {
+//   animation: parallax linear;
+//   animation-timeline: scroll();
+// }
+// @keyframes parallax {
+//   to {
+//     transform: translateY(-500px);
+//   }
+// }
 .header {
   text-align: center;
   font-size: 34px;
@@ -81,9 +81,9 @@ footer {
 ul {
   margin-top: 20px;
 }
-.navanchor {
-  display: block;
-  position: relative;
-  top: -1px; /* adjusted to suit my purposes */
-  visibility: hidden;
-}
+// .navanchor {
+//   display: block;
+//   position: relative;
+//   top: -1px; /* adjusted to suit my purposes */
+//   visibility: hidden;
+// }

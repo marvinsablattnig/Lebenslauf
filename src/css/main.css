@@ -213,6 +213,10 @@
   margin: 0 4px;
 }
 
+.language {
+  padding: 3px !important;
+}
+
 #home {
   margin: 16vh 0px 0px 20vw !important;
   width: 50vw;
@@ -326,31 +330,17 @@ a:hover {
 }
 .main.light {
   background-color: white;
-  animation: parallax linear;
-  animation-timeline: scroll();
 }
 .main.light * {
   color: black;
 }
 .main.dark {
   background-color: rgb(33, 125, 171);
-  animation: parallax linear;
-  animation-timeline: scroll();
 }
 .main.dark * {
   color: white;
 }
 
-footer {
-  animation: parallax linear;
-  animation-timeline: scroll();
-}
-
-@keyframes parallax {
-  to {
-    transform: translateY(-500px);
-  }
-}
 .header {
   text-align: center;
   font-size: 34px;
@@ -378,11 +368,4 @@ footer {
 
 ul {
   margin-top: 20px;
-}
-
-.navanchor {
-  display: block;
-  position: relative;
-  top: -1px; /* adjusted to suit my purposes */
-  visibility: hidden;
 }/*# sourceMappingURL=main.css.map */
