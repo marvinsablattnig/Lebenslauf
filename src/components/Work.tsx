@@ -128,7 +128,7 @@ const Work = () => {
               <div>
                 <em>Caritas</em>
               </div>{" "}
-              im Franziskusheim, Retirement Home
+              at the Franziskusheim, Retirement Home
             </div>
           </div>
         </div>
